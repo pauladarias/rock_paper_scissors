@@ -10,7 +10,6 @@ const scissors = document.getElementById("scissors");
 function getrobotChoice() {
   const choices = ["Rock", "Paper", "Scissors"];
   let randomNumber = choices[Math.floor(Math.random() * 3)];
-  // console.log(randomNumber);
   return randomNumber;
 }
 
@@ -18,7 +17,7 @@ function win(userChoice, robotChoice) {
   userScoreCount++;
   userScoreBoard.innerHTML = userScoreCount;
   robotScoreBoard.innerHTML = robotScoreCount;
-  resultsBoard.innerText = userChoice + " beats " + robotChoice + " You Win!";
+  resultsBoard.innerText = userChoice + " beats " + robotChoice + ". You Win!";
 }
 
 function lose(userChoice, robotChoice) {
@@ -26,12 +25,12 @@ function lose(userChoice, robotChoice) {
   userScoreBoard.innerHTML = userScoreCount;
   robotScoreBoard.innerHTML = robotScoreCount;
   resultsBoard.innerText =
-    userChoice + " loses to " + robotChoice + " You Lose!";
+    userChoice + " loses to " + robotChoice + ". You Lose!";
 }
 
 function draw(userChoice, robotChoice) {
   resultsBoard.innerText =
-    userChoice + " equals " + robotChoice + " It's a draw!";
+    userChoice + " equals " + robotChoice + ". It's a draw!";
 }
 
 function game(userChoice) {
